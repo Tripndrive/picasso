@@ -122,7 +122,7 @@ class BitmapHunter implements Runnable {
     MarkableInputStream markStream = new MarkableInputStream(stream);
     stream = markStream;
     markStream.allowMarksToExpire(false);
-    long mark = markStream.savePosition(1024);
+    long mark = markStream.savePosition(131072);
 
     final BitmapFactory.Options options = RequestHandler.createBitmapOptions(request);
     final boolean calculateSize = RequestHandler.requiresInSampleSize(options);
